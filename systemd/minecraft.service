@@ -1,0 +1,14 @@
+cat << 'EOF' > systemd/minecraft.service
+[Unit]
+Description=Minecraft Cobblemon Server on AWS t3.small
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/minecraft
+ExecStart=/usr/bin/java -Xmx1500M -Xms1G -jar fabric-server-launch.jar nogui
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF

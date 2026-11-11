@@ -1,0 +1,10 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+crashers.txt
+.terraform.lock.hcl
+
+# Chaves privadas
+*.pem
+*.key
